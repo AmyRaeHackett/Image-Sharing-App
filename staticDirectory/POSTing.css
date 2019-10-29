@@ -1,0 +1,136 @@
+.floatright {
+    float: right;
+}
+
+#welcome {
+    float: right
+}
+
+.home {
+    background-size: cover;
+    padding-top: 24%;
+    height: 55vh;
+    background: #86a6bb url(skyimage.jpg) center;
+}
+
+body {
+
+    background-color: #86a6bb;
+    font-family: helvetica, serif;
+    text-align: center;
+    color: white;
+
+}
+
+.bord, form, .form {
+
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+button, input[type=submit], #round {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #B7BFC2;
+    padding: 0.4em;
+    font-weight: bold;
+}
+
+textarea, form input[type=password] {
+    border-radius: 10px;
+
+}
+
+#homepage {
+    font-size: 2em;
+
+}
+
+#password {
+    color: brown;
+}
+
+.buttons {
+    text-align: center;
+    float: none;
+
+}
+
+button:hover {
+    background-color: #B7BFC2;
+
+}
+
+img.images {
+    max-width: 20%;
+    max-height: 20%;
+    display: initial;
+}
+
+img.imagesLarge {
+    max-width: 60%;
+    max-height: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+#imageName {
+    display: none;
+}
+
+#commentTable {
+    text-align: center;
+    margin: auto;
+}
+
+.row {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1em;
+}
+
+#login {
+    color: brown;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+footer {
+    padding: 2em;
+    border-top: solid white 2px;
+    position: sticky;
+}
+
+#logo {
+    float: left;
+}
+
+#exists {
+    color: brown;
+}
+
+.displays {
+    text-align: center;
+
+}
+
+.imageDisplay2 {
+    max-width: 50%;
+    max-height: 50%;
+
+}
+
+#wrong, #registered {
+    color: brown;
+}

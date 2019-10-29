@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image by <%= images.username %> | illustrate</title>
+    <link rel="stylesheet" href="/POSTing.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+    <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+
+</head>
+<body>
+<a href="/"><img id="logo" src="/illustrate.png" width="200" height="45"></a>
+<a href="http://localhost:9035/<%= log %>">
+    <button type="button" class="floatright"> <%= option %></button>
+</a>
+<a href="/explore">
+    <button type="button" class="floatright">Explore</button>
+</a>
+<a href="/">
+    <button type="button" class="floatright">Home</button>
+</a>
+
+<br>
+<br>
+<br>
+<img name="image" class="imagesLarge" src="/uploads/<%= images.filename %>">
+
+
+<p>Uploaded <i><%= images.date %></i> by <a href="/user/<%= images.username %>"><b><%= images.username %></b></a></p>
+
+<!--LIKES-->
+<button onclick="likeFunction(<%= images.id %>)">Like</button>
+
+<p id="likes"><%= images.likes %> likes </p>
+
+
+<!--COMMENTS FORM-->
+
+<div class="form">
+    Add a comment: <textarea class="commentForm" maxlength="150" name="comment" placeholder="Respond with a comment."
+                             type="text"
+                             style="width:90%; height:80px;" required></textarea>
+
+    <!--<input type="submit" value = "Comment" onclick = "commentFunction()">-->
+    <button onclick="commentFunction(<%= images.id %>)">Comment</button>
+</div>
+<p id="login"></p>
+
+
+<!--ALL COMMENTS-->
+<p><b>Comments</b></p>
+
+<table id="commentTable">
+
+    <%
+    var array = comments.reverse(); //showing most recent comments
+            for (var i in array) { %>
+    <tr>
+        <td width="150"><a href="/user/<%= comments[i].username %>"><b><%= comments[i].username %></b></a>
+            <br><%= comments[i].date %></td>
+        <td class="row" width="400"><%= comments[i].comment %></td>
+    </tr>
+
+    <% } %>
+</table>
+<br>
+<br>
+<br>
+
+<footer>© Amy Hackett 2019</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | illustrate</title>
+    <link rel="stylesheet" href="POSTing.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+    <script
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<a href="/"><img id="logo" src="illustrate.png" width="200" height="45"></a>
+<a href="/explore">
+    <button type="button" class="floatright">Explore</button>
+</a>
+<a href="/">
+    <button type="button" class="floatright">Home</button>
+</a>
+<br>
+<br>
+<h1>Register</h1>
+
+<div class="form">
+    Enter a username: <input type="text" id="nameCheck" name="username" pattern="[A-Za-z0-9_]{6,15}" required><br>
+    First name: <input type="text" id="firstname" name="firstname" required><br>
+    Surname: <input type="text" id="surname" name="surname" required><br>
+    Enter a password: <input type="password" id="password" name="password" pattern="[a-zA-Z0-9!]{6,25}" required><br>
+    Re-enter password: <input type="password" id="password2" name="password2" pattern="[a-zA-Z0-9!]{6,25}" required><br>
+
+    <button onclick="userExists()">Submit</button>
+
+</div>
+
+<p id="exists"></p>
+
+<p>Username must be between 6-15 characters and contain only letters, numbers, underscores or dashes.</p>
+<p>Password must be between 6-25 characters and contain one lowercase letter, one uppercase letter, one number and one of the following: !?_@~#</p>
+<br>
+<br>
+
+<p id = "registered" >Click <a href = "http://localhost:9035/login.html"><b>here</b></a> to login once you've registered!</p>
+
+
+<footer>© Amy Hackett 2019</footer>
+
+</body>
+</html>

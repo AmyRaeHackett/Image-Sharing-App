@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore | illustrate</title>
+    <link rel="stylesheet" href="POSTing.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+
+</head>
+<body>
+<a href="/"><img id="logo" src="illustrate.png" width="200" height="45"></a>
+<a href="<%= log %>">
+    <button type="button" class="floatright"> <%= option %></button>
+</a>
+<a href="/explore">
+    <button type="button" class="floatright">Explore</button>
+</a>
+<a href="/">
+    <button type="button" class="floatright">Home</button>
+</a>
+
+
+<br>
+<br>
+<br>
+
+<div class="displays">
+    <a href="/explore"><img src="grid.png" height="25" width="25"></a>
+    <a href="/explore2"><img src="table.png" height="23" width="50"></a>
+</div>
+<br>
+
+
+<h1>Explore</h1>
+
+<% for (var result in results.reverse()) { //showing most recent pics
+    var imageName = results[result].filename;
+    var imageID = results[result].id;
+    var imageDate = results[result].date;
+    var imageUser = results[result].username;
+    var likes = results[result].likes;
+%>
+
+<table class="tableDisplay">
+    <tr id="details">
+        <td width="1000"><a href="http://localhost:9035/image/<%= imageID %>"><img class="imageDisplay2"
+                                                                                 src="../uploads/<%= imageName %>"></a>
+        </td>
+
+        <td id="details"><i><%= imageDate %></i> <br> <a href="/user/<%= imageUser %>"><b><%= imageUser %></b></a> <br>
+
+            <%= likes %> likes
+        </td>
+    </tr>
+
+
+</table>
+
+<% } %>
+<br>
+<br>
+
+<footer>© Amy Hackett 2019</footer>
+
+</body>
+</html>

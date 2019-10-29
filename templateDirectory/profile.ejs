@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | illustrate</title>
+    <link rel="stylesheet" href="POSTing.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+
+</head>
+<body>
+<a href="/"><img id="logo" src="illustrate.png" width="200" height="45"></a>
+<a href="/logout">
+    <button type="button" class="floatright"> Logout</button>
+</a>
+<a href="/explore">
+    <button type="button" class="floatright">Explore</button>
+</a>
+<a href="/">
+    <button type="button" class="floatright">Home</button>
+</a>
+
+<div id="homepage">
+    <br>
+    <br>
+    <p>Welcome <b><%= username %></b>!</p>
+</div>
+
+
+<p>This is your profile page.</p>
+<p>Here you can upload files!</p>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="myimage" accept="image/*">
+    <input type="submit">
+</form>
+
+
+<footer>© Amy Hackett 2019</footer>
+
+</body>
+</html>
